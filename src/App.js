@@ -1,13 +1,16 @@
-import logo from './logo.svg';
+import logo from './rocket.gif';
+import logo2 from './rocket2.gif';
+
 import './App.css';
 
 function App() {
+  const image = process.env.REACT_APP_ENV === 'dev'? logo2 : logo;
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={image} alt="logo" width="500px" height="400px"/>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Deployment Frenzy!!!
         </p>
         <a
           className="App-link"
